@@ -1,8 +1,11 @@
 import socket
 
 c = socket.socket()
-c.connect(('localhost',9999))
+c.bind(('localhost', 9999))
+
+c.listen(3)
+c,add = c.accept()
 while True:
+    print(c.renv(1024).decode())
     user = input('C>>>')
-    c.send(bytes(user, 'utf-8'))
-    print(c.recv(1024).decode())
+    c.send(bytes(user,'utf-8'))
