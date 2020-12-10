@@ -1,6 +1,6 @@
 def bubble_sort(array):
     n = len(array)
-
+    import pdb;pdb.set_trace()
     for i in range(n):
         already_sorted = True
 
